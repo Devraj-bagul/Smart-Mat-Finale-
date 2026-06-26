@@ -172,7 +172,7 @@ export const yogaImages = {
     steps: [WarriorIStep1, WarriorIStep2, WarriorIStep3, WarriorIStep4, WarriorIStep5]
   },
   WarriorII: {
-    cover: WarriorIICover,
+    cover: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782479026/ChatGPT_Image_Jun_26_2026_06_33_28_PM_b2wcid.png',
     steps: [WarriorIIStep1, WarriorIIStep2, WarriorIIStep3, WarriorIIStep4]
   },
   WarriorIII: {
@@ -246,7 +246,7 @@ export const yogaImages = {
     steps: [WarriorIStep1, WarriorIStep2, WarriorIStep3, WarriorIStep4, WarriorIStep5]
   },
   'Virabhadrasana II (Warrior II)': {
-    cover: WarriorIICover,
+    cover: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782479026/ChatGPT_Image_Jun_26_2026_06_33_28_PM_b2wcid.png',
     steps: [WarriorIIStep1, WarriorIIStep2, WarriorIIStep3, WarriorIIStep4]
   },
   'Virabhadrasana III (Warrior III)': {

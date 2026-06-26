@@ -604,16 +604,43 @@
     gap: 16px;
   }
 
+  .greeting {
+    font-size: 1.8rem;
+  }
+
   .ai-suggestion-card {
     width: 100%;
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .stats-dashboard-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .action-grid {
     grid-template-columns: 1fr !important;
+  }
+
+  .dashboard-main-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .growth-graph {
+    padding: 16px;
+  }
+
+  .graph-container {
+    height: 220px;
   }
 
   .calendar-grid {
@@ -635,8 +662,37 @@
     height: 16px;
   }
 
+  .smart-calendar {
+    padding: 16px;
+  }
+
+  .gamification-section {
+    padding: 16px;
+  }
+
+  .badges-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
   .progress-svg {
     height: 200px;
+  }
+
+  .todays-plan {
+    padding: 16px;
+  }
+
+  .recent-activity {
+    padding: 16px;
+  }
+
+  .journey-tracker-section {
+    padding: 12px 16px;
+  }
+
+  .insights-section {
+    padding: 12px 16px;
   }
 }
 
@@ -740,3 +796,22 @@
   }
 }
 
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .profile-card-summary {
+    padding: 16px !important;
+  }
+
+  .profile-form-panel {
+    padding: 16px !important;
+  }
+
+  .profile-header-card {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+}

@@ -7,6 +7,7 @@ import VirtualSessionPage from './pages/VirtualSessionPage';
 import AIGuruPage from './pages/AIGuruPage';
 import StartYogaPage from './pages/StartYogaPage';
 import ProfilePage from './pages/ProfilePage';
+import MeditationPage from './pages/MeditationPage';
 import './index.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/ai-guru" element={<AIGuruPage />} />
         <Route path="/start-yoga" element={<StartYogaPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/meditation" element={<MeditationPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PlayCircle, MessageSquare, Video, LogOut, Home, BookOpen, User } from 'lucide-react';
+import { PlayCircle, MessageSquare, Video, LogOut, Home, BookOpen, User, Wind, Menu, X } from 'lucide-react';
 import logo from '../assets/logo.png';
 import './DashboardLayout.css';
 import { dbService } from '../services/dbService';
@@ -8,6 +8,7 @@ import { dbService } from '../services/dbService';
 export default function DashboardLayout({ children, activeTab, onNavClick }) {
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState(() => dbService.getCurrentUser());
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     const handleUpdate = () => {
@@ -22,68 +23,76 @@ export default function DashboardLayout({ children, activeTab, onNavClick }) {
     navigate('/');
   };
 
+  const handleNav = (tab, path) => {
+    setSidebarOpen(false);
+    if (activeTab !== tab) navigate(path);
+    if (onNavClick) onNavClick(tab);
+  };
+
   return (
     <div className="dashboard-layout">
-      <aside className="sidebar glass-panel">
+      {/* Mobile overlay backdrop */}
+      {sidebarOpen && (
+        <div
+          className="sidebar-overlay"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
+      <aside className={`sidebar glass-panel ${sidebarOpen ? 'sidebar-open' : ''}`}>
         <div className="sidebar-logo flex-center">
           <img src={logo} alt="NextGen Logo" className="brand-logo" />
           <span className="logo-text">NextGen <span className="text-gradient">Yoga Mat</span></span>
         </div>
 
+        {/* Close button for mobile */}
+        <button className="sidebar-close-btn" onClick={() => setSidebarOpen(false)}>
+          <X size={20} />
+        </button>
+
         <nav className="sidebar-nav">
           <button
             className={`nav-item ${activeTab === 'dashboard' ? 'active' : ''}`}
-            onClick={() => {
-              if (activeTab !== 'dashboard') navigate('/home', { state: { tab: 'dashboard' } });
-              if (onNavClick) onNavClick('dashboard');
-            }}
+            onClick={() => handleNav('dashboard', '/home')}
           >
             <Home size={20} />
             <span>Dashboard</span>
           </button>
           <button
             className={`nav-item ${activeTab === 'yoga-book' ? 'active' : ''}`}
-            onClick={() => {
-              if (activeTab !== 'yoga-book') navigate('/yogabook');
-              if (onNavClick) onNavClick('yoga-book');
-            }}
+            onClick={() => handleNav('yoga-book', '/yogabook')}
           >
             <BookOpen size={20} />
             <span>Yoga Book</span>
           </button>
           <button
             className={`nav-item ${activeTab === 'start' ? 'active' : ''}`}
-            onClick={() => {
-              if (activeTab !== 'start') navigate('/start-yoga');
-              if (onNavClick) onNavClick('start');
-            }}
+            onClick={() => handleNav('start', '/start-yoga')}
           >
             <PlayCircle size={20} /> Start Yoga
           </button>
           <button
             className={`nav-item ${activeTab === 'guru' ? 'active' : ''}`}
-            onClick={() => {
-              if (activeTab !== 'guru') navigate('/ai-guru');
-              if (onNavClick) onNavClick('guru');
-            }}
+            onClick={() => handleNav('guru', '/ai-guru')}
           >
             <MessageSquare size={20} /> AI Yoga Guru
           </button>
           <button
             className={`nav-item ${activeTab === 'virtual-session' ? 'active' : ''}`}
-            onClick={() => {
-              if (activeTab !== 'virtual-session') navigate('/virtual-session');
-              if (onNavClick) onNavClick('virtual-session');
-            }}
+            onClick={() => handleNav('virtual-session', '/virtual-session')}
           >
             <Video size={20} /> Virtual Session
           </button>
           <button
+            className={`nav-item ${activeTab === 'meditation' ? 'active' : ''}`}
+            onClick={() => handleNav('meditation', '/meditation')}
+          >
+            <Wind size={20} />
+            <span>Meditation</span>
+          </button>
+          <button
             className={`nav-item ${activeTab === 'profile' ? 'active' : ''}`}
-            onClick={() => {
-              if (activeTab !== 'profile') navigate('/profile');
-              if (onNavClick) onNavClick('profile');
-            }}
+            onClick={() => handleNav('profile', '/profile')}
           >
             <User size={20} />
             <span>Profile</span>
@@ -99,12 +108,17 @@ export default function DashboardLayout({ children, activeTab, onNavClick }) {
 
       <main className="dashboard-content">
         <header className="dashboard-header flex-between">
+          {/* Hamburger for mobile */}
+          <button className="hamburger-btn" onClick={() => setSidebarOpen(true)}>
+            <Menu size={24} />
+          </button>
           <h2>
             {activeTab === 'dashboard' && 'Dashboard'}
             {activeTab === 'practice' && 'Your Progress'}
             {activeTab === 'start' && 'Live Session'}
             {activeTab === 'guru' && 'AI Yoga Guru'}
             {activeTab === 'virtual-session' && 'Virtual Session'}
+            {activeTab === 'meditation' && 'Mindful Meditation'}
             {activeTab === 'yoga-book' && ''}
             {activeTab === 'profile' && 'My Profile'}
           </h2>

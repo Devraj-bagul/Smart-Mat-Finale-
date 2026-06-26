@@ -610,3 +610,110 @@
   50% { transform: scale(1.12); }
   100% { transform: scale(1); }
 }
+
+/* ========================================================= */
+/* START YOGA - MOBILE RESPONSIVE                            */
+/* ========================================================= */
+
+@media (max-width: 1024px) {
+  .hardware-panel {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .start-yoga-page {
+    flex-direction: column;
+    height: auto;
+    min-height: calc(100vh - 100px);
+    gap: 16px;
+  }
+
+  .main-camera-section {
+    flex: none;
+  }
+
+  .camera-container {
+    height: 300px;
+    flex: none;
+  }
+
+  .hardware-panel {
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+
+  .mat-visualizer {
+    padding: 12px;
+  }
+
+  .mat-row {
+    gap: 20px;
+  }
+
+  .fsr-pad {
+    width: 40px;
+    height: 40px;
+  }
+
+  .instruction-overlay {
+    width: 90%;
+    padding: 14px 20px;
+    bottom: 12px;
+  }
+
+  .instruction-text {
+    font-size: 1.1rem;
+  }
+
+  .instruction-subtext {
+    font-size: 0.85rem;
+  }
+
+  .step-animation-overlay {
+    width: 100px;
+    height: 140px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .hold-timer-overlay {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hold-timer-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .controls-card {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 480px) {
+  .camera-container {
+    height: 240px;
+  }
+
+  .pose-overlay {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+
+  .pose-overlay h3 {
+    font-size: 0.95rem;
+  }
+
+  .led-bulb {
+    width: 30px;
+    height: 30px;
+  }
+}
+

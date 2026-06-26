@@ -1081,20 +1081,53 @@ export default function AIGuruPage() {
             </div>
           </div>
 
-          <button
-            className={`mic-trigger-btn ${isSessionActive ? 'active' : ''}`}
-            onClick={handleToggleListen}
-          >
-            {isSessionActive ? (
-              <>
-                <MicOff size={20} /> Stop Session
-              </>
-            ) : (
-              <>
-                <Mic size={20} /> Start Voice Session
-              </>
-            )}
-          </button>
+          <div style={{ display: 'flex', flexDirection: 'row', width: '100%', gap: '12px', alignItems: 'center' }}>
+            <button
+              className={`mic-trigger-btn ${isSessionActive ? 'active' : ''}`}
+              onClick={handleToggleListen}
+              style={{ flex: 1 }}
+            >
+              {isSessionActive ? (
+                <>
+                  <MicOff size={20} /> Stop Session
+                </>
+              ) : (
+                <>
+                  <Mic size={20} /> Start Voice Session
+                </>
+              )}
+            </button>
+
+            <a
+              href="https://next-gen-yoga-assistant.vercel.app/generate-program"
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '50px',
+                height: '50px',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, #ff4b4b, #e63030)',
+                color: '#fff',
+                boxShadow: '0 4px 15px rgba(255, 75, 75, 0.3)',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                flexShrink: 0,
+                textDecoration: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 8px 20px rgba(255, 75, 75, 0.5)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(255, 75, 75, 0.3)';
+              }}
+              title="Start Voice Session with AI Assistant"
+            >
+              <Mic size={22} color="#fff" />
+            </a>
+          </div>
         </div>
 
         {/* Right Side: Chat & Interactive Transcript */}

@@ -403,30 +403,83 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .nav-actions .btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
   .hero-section {
     grid-template-columns: 1fr;
     text-align: center;
-    padding-top: 48px;
+    padding-top: 32px;
+    gap: 32px;
+    margin-bottom: 40px;
+    min-height: auto;
   }
 
   .hero-content {
     align-items: center;
+    order: 1;
+  }
+
+  .mat-mockup {
+    order: 2;
+    transform: none;
+    aspect-ratio: 16/9;
+    border-radius: 24px;
+  }
+
+  .mat-mockup:hover {
+    transform: none;
   }
 
   .hero-subtitle {
     margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .btn-large {
+    padding: 14px 28px;
+    font-size: 1rem;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .innovation-box {
     flex-direction: column;
     text-align: center;
-    gap: 48px;
+    gap: 32px;
+    padding: 24px;
   }
   
+  .innovation-content h2 {
+    font-size: 2rem;
+  }
+
   .innovation-list {
     align-items: center;
   }
@@ -435,9 +488,36 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+    gap: 24px;
   }
   
   .footer-brand .logo {
     justify-content: center !important;
   }
+
+  /* Section headings on mobile */
+  section > h2, .section-title {
+    font-size: 1.8rem !important;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+

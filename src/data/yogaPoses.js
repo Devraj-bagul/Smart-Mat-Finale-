@@ -87,7 +87,7 @@ export const yogaPoses = [
     level: 'Beginner',
     goal: 'Flexibility',
     bodyPart: 'Back',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782478419/Balasana_dimwav.png',
     focus: 'Rest & Recovery',
     tags: ['🧠 Beginners', '✨ Relaxing'],
     steps: [
@@ -239,7 +239,7 @@ export const yogaPoses = [
     level: 'Advanced',
     goal: 'Balance',
     bodyPart: 'Full Body',
-    image: 'https://images.unsplash.com/photo-1555661144-8c634c03ba86?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782481082/Sirsasana_Headstand_bsa9w0.png',
     focus: 'Inversion',
     tags: ['⚡ Advanced Challenge'],
     steps: [
@@ -277,7 +277,7 @@ export const yogaPoses = [
     level: 'Intermediate',
     goal: 'Posture',
     bodyPart: 'Back',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782484269/Ardha_Matsyendrasana_Half_Twist_cgj84u.png',
     focus: 'Spinal Twist',
     tags: ['🔥 Popular'],
     steps: [
@@ -334,7 +334,7 @@ export const yogaPoses = [
     level: 'Advanced',
     goal: 'Balance',
     bodyPart: 'Full Body',
-    image: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782484401/Natarajasana_Dancer_Pose_ipvd84.png',
     focus: 'Balance & Backbend',
     tags: ['⚡ Advanced Challenge'],
     steps: [
@@ -353,7 +353,7 @@ export const yogaPoses = [
     level: 'Advanced',
     goal: 'Flexibility',
     bodyPart: 'Back',
-    image: 'https://images.unsplash.com/photo-1545389336-d6e4655f44aa?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782484520/Urdhva_Dhanurasana_Wheel_Pose_osgnbt.png',
     focus: 'Deep Backbend',
     tags: ['⚡ Advanced Challenge'],
     steps: [
@@ -372,7 +372,7 @@ export const yogaPoses = [
     level: 'Beginner',
     goal: 'Posture',
     bodyPart: 'Full Body',
-    image: 'https://images.unsplash.com/photo-1522845015757-50bce044e5da?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782484647/Savasana_Corpse_Pose_b7car3.png',
     focus: 'Relaxation',
     tags: ['✨ Relaxing'],
     steps: [
@@ -391,7 +391,7 @@ export const yogaPoses = [
     level: 'Advanced',
     goal: 'Flexibility',
     bodyPart: 'Legs',
-    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782484754/Padmasana_Lotus_Pose_spigtt.png',
     focus: 'Hips & Knees',
     tags: ['⚡ Advanced Challenge', '✨ Relaxing'],
     steps: [
@@ -410,7 +410,7 @@ export const yogaPoses = [
     level: 'Intermediate',
     goal: 'Flexibility',
     bodyPart: 'Legs',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782485203/Piagon_pose_j2drn1.png',
     focus: 'Deep Hip Opening',
     tags: ['🔥 Popular'],
     steps: [
@@ -429,7 +429,7 @@ export const yogaPoses = [
     level: 'Intermediate',
     goal: 'Balance',
     bodyPart: 'Full Body',
-    image: 'https://images.unsplash.com/photo-1520607161833-2a3b092fb189?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782485016/garuda_asan_pose_q3sx84.png',
     focus: 'Balance & Focus',
     tags: ['⭐ Recommended'],
     steps: [
@@ -448,7 +448,7 @@ export const yogaPoses = [
     level: 'Intermediate',
     goal: 'Balance',
     bodyPart: 'Legs',
-    image: 'https://images.unsplash.com/photo-1540206276207-3af25c08abc4?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782485016/ardha_chandra_pqfr8h.png',
     focus: 'Balance & Core',
     tags: ['🔥 Popular'],
     steps: [
@@ -467,7 +467,7 @@ export const yogaPoses = [
     level: 'Intermediate',
     goal: 'Strength',
     bodyPart: 'Core',
-    image: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782485131/side_plank_pose_rvf9e0.png',
     focus: 'Core & Arm Strength',
     tags: ['💪 Core Building'],
     steps: [
@@ -486,7 +486,7 @@ export const yogaPoses = [
     level: 'Beginner',
     goal: 'Posture',
     bodyPart: 'Back',
-    image: 'https://images.unsplash.com/photo-1521405617581-2d98d09cb8d9?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782485514/dog_pose_s8fed9.jpg',
     focus: 'Chest Opening',
     tags: ['🧠 Beginners'],
     steps: [
@@ -543,7 +543,7 @@ export const yogaPoses = [
     level: 'Beginner',
     goal: 'Flexibility',
     bodyPart: 'Legs',
-    image: 'https://images.unsplash.com/photo-1530510660604-03a116f16474?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782485558/low_lunge_tvipge.png',
     focus: 'Hip Flexor Stretch',
     tags: ['⭐ Recommended'],
     steps: [
@@ -562,7 +562,7 @@ export const yogaPoses = [
     level: 'Intermediate',
     goal: 'Flexibility',
     bodyPart: 'Back',
-    image: 'https://images.unsplash.com/photo-1511295742362-92c96b124e5e?auto=format&fit=crop&w=500&q=80',
+    image: 'https://res.cloudinary.com/dalo5zpik/image/upload/v1782485667/Dhanurasana_Bow_Pose_ebemir.png',
     focus: 'Deep Backbend',
     tags: ['🔥 Popular'],
     steps: [

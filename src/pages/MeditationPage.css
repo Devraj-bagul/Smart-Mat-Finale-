@@ -1,0 +1,826 @@
+/* ========================================================= */
+/* MEDITATION PAGE — Premium Dark Glassmorphism UI           */
+/* ========================================================= */
+
+.meditation-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-bottom: 40px;
+}
+
+/* ── Header ── */
+.med-header {
+  text-align: center;
+  padding: 8px 0 4px;
+}
+
+.med-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.med-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin: 0 0 20px 0;
+}
+
+.med-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.med-stat-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: rgba(0, 242, 254, 0.06);
+  border: 1px solid rgba(0, 242, 254, 0.15);
+  border-radius: 14px;
+  padding: 10px 22px;
+  min-width: 90px;
+  backdrop-filter: blur(10px);
+}
+
+.med-stat-num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  line-height: 1.1;
+}
+
+.med-stat-lbl {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Main Grid ── */
+.med-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.med-left-col,
+.med-center-col,
+.med-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Card ── */
+.med-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(16px);
+  transition: border-color 0.25s ease;
+}
+
+.med-card:hover {
+  border-color: rgba(0, 242, 254, 0.15);
+}
+
+.med-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.3px;
+}
+
+/* ── Session Grid ── */
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.session-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+}
+
+.session-btn:hover:not(:disabled) {
+  background: rgba(0, 242, 254, 0.07);
+  border-color: rgba(0, 242, 254, 0.25);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.session-btn.active {
+  background: rgba(0, 242, 254, 0.1);
+  border-color: rgba(0, 242, 254, 0.4);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
+}
+
+.session-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.session-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.session-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.session-dur {
+  font-size: 0.72rem;
+  color: var(--accent-cyan);
+  opacity: 0.8;
+}
+
+/* Custom slider */
+.custom-input-row {
+  margin-top: 14px;
+}
+
+.custom-input-row label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.custom-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.med-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  cursor: pointer;
+}
+
+.med-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00f2fe, #9b51e0);
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+  transition: transform 0.15s ease;
+}
+
+.med-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.slider-val {
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+  font-weight: 700;
+  min-width: 42px;
+  text-align: right;
+}
+
+/* ── Breathing Pattern ── */
+.breath-pattern-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.breath-pattern-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.breath-pattern-btn:hover {
+  background: rgba(155, 81, 224, 0.08);
+  border-color: rgba(155, 81, 224, 0.3);
+  color: var(--text-primary);
+}
+
+.breath-pattern-btn.active {
+  background: rgba(155, 81, 224, 0.1);
+  border-color: rgba(155, 81, 224, 0.5);
+  color: var(--accent-purple);
+  box-shadow: 0 0 16px rgba(155, 81, 224, 0.12);
+}
+
+.bp-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.bp-ratio {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  font-family: monospace;
+}
+
+.breath-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.breath-legend b {
+  color: var(--accent-cyan);
+}
+
+/* ── Sound Grid ── */
+.sound-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.sound-btn {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-family: inherit;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.sound-btn:hover {
+  background: rgba(0, 242, 254, 0.06);
+  border-color: rgba(0, 242, 254, 0.2);
+  color: var(--text-primary);
+}
+
+.sound-btn.active {
+  background: rgba(0, 242, 254, 0.12);
+  border-color: rgba(0, 242, 254, 0.45);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 14px rgba(0, 242, 254, 0.1);
+  animation: sound-pulse 2.5s infinite;
+}
+
+@keyframes sound-pulse {
+  0%, 100% { box-shadow: 0 0 14px rgba(0, 242, 254, 0.1); }
+  50% { box-shadow: 0 0 22px rgba(0, 242, 254, 0.25); }
+}
+
+.volume-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sound-note {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 10px 0 0 0;
+  padding: 8px 12px;
+  background: rgba(255, 200, 0, 0.06);
+  border: 1px solid rgba(255, 200, 0, 0.15);
+  border-radius: 10px;
+  line-height: 1.4;
+}
+
+/* ── Timer Card ── */
+.timer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 24px;
+}
+
+.timer-circle-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.timer-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 16px rgba(0, 242, 254, 0.15));
+}
+
+.timer-center-display {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.timer-time {
+  font-size: 2.8rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  background: linear-gradient(135deg, #00f2fe, #9b51e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.timer-label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timer-idle-icon {
+  font-size: 2.5rem;
+}
+
+.timer-idle-txt {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.timer-done-icon {
+  font-size: 2.5rem;
+  animation: done-bounce 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes done-bounce {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.3); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.timer-done-txt {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00f2fe, #9b51e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Timer Controls */
+.timer-controls {
+  width: 100%;
+}
+
+.med-btn-primary {
+  width: 100%;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #00f2fe 0%, #9b51e0 100%);
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 20px rgba(0, 242, 254, 0.2);
+}
+
+.med-btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 242, 254, 0.3);
+}
+
+.med-btn-primary:active {
+  transform: translateY(0);
+}
+
+.med-btn-ghost {
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.med-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.timer-btn-row {
+  display: flex;
+  gap: 10px;
+}
+
+.timer-btn-row .med-btn-primary {
+  flex: 1;
+}
+
+.timer-session-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.session-icon-sm {
+  font-size: 1.1rem;
+}
+
+.session-dot {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── Breathing Orb ── */
+.breathing-card {
+  text-align: center;
+  padding: 24px;
+}
+
+.breathing-orb-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  margin: 16px 0;
+}
+
+.breath-rings {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.breath-ring {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.breath-ring.ring-1 {
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.breath-ring.ring-2 {
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(155, 81, 224, 0.15);
+}
+
+.breath-ring.inhale {
+  opacity: 0.6;
+  animation: ring-expand 4s ease-out infinite;
+}
+
+.breath-ring.exhale {
+  opacity: 0.3;
+  animation: ring-contract 6s ease-in infinite;
+}
+
+@keyframes ring-expand {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+@keyframes ring-contract {
+  0% { transform: scale(1.3); opacity: 0.3; }
+  100% { transform: scale(0.8); opacity: 0; }
+}
+
+.breathing-orb {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 35% 35%, rgba(0, 242, 254, 0.4), rgba(155, 81, 224, 0.3));
+  border: 2px solid rgba(0, 242, 254, 0.3);
+  box-shadow:
+    0 0 30px rgba(0, 242, 254, 0.2),
+    0 0 60px rgba(155, 81, 224, 0.1),
+    inset 0 0 30px rgba(0, 242, 254, 0.1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.breathing-orb.inhale {
+  box-shadow:
+    0 0 40px rgba(0, 242, 254, 0.35),
+    0 0 80px rgba(0, 242, 254, 0.15),
+    inset 0 0 30px rgba(0, 242, 254, 0.15);
+  border-color: rgba(0, 242, 254, 0.6);
+}
+
+.breathing-orb.hold {
+  box-shadow:
+    0 0 50px rgba(155, 81, 224, 0.35),
+    0 0 100px rgba(155, 81, 224, 0.15),
+    inset 0 0 30px rgba(155, 81, 224, 0.15);
+  border-color: rgba(155, 81, 224, 0.6);
+}
+
+.breathing-orb.exhale {
+  box-shadow:
+    0 0 20px rgba(0, 242, 254, 0.1),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 242, 254, 0.2);
+}
+
+.orb-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orb-phase-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.breath-phase-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  margin: 0 0 4px 0;
+}
+
+.breath-pattern-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ── Right Col ── */
+.affirmation-card {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.06), rgba(155, 81, 224, 0.06));
+  border: 1px solid rgba(0, 242, 254, 0.12);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.affirmation-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tips-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.tip-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.journey-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.journey-item:hover {
+  background: rgba(0, 242, 254, 0.05);
+  border-color: rgba(0, 242, 254, 0.15);
+}
+
+.journey-num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00f2fe, #9b51e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.journey-lbl {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.journey-empty {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 12px 0 0 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ========================================================= */
+/* MEDITATION — MOBILE RESPONSIVE                            */
+/* ========================================================= */
+
+@media (max-width: 1100px) {
+  .med-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .med-right-col {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .med-right-col .med-card {
+    flex: 1;
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .meditation-page {
+    gap: 18px;
+    padding-bottom: 24px;
+  }
+
+  .med-title {
+    font-size: 1.8rem;
+  }
+
+  .med-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .med-stats-row {
+    gap: 10px;
+  }
+
+  .med-stat-chip {
+    padding: 8px 16px;
+    min-width: 75px;
+  }
+
+  .med-stat-num {
+    font-size: 1.3rem;
+  }
+
+  .med-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .med-right-col {
+    flex-direction: column;
+  }
+
+  .med-right-col .med-card {
+    min-width: unset;
+  }
+
+  .med-center-col {
+    order: -1;
+  }
+
+  .timer-circle-wrap {
+    width: 190px;
+    height: 190px;
+  }
+
+  .timer-time {
+    font-size: 2.4rem;
+  }
+
+  .session-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .breathing-orb-wrap {
+    height: 150px;
+  }
+
+  .breathing-orb {
+    width: 90px;
+    height: 90px;
+  }
+
+  .sound-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .breath-pattern-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .med-title {
+    font-size: 1.5rem;
+  }
+
+  .session-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sound-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timer-circle-wrap {
+    width: 170px;
+    height: 170px;
+  }
+
+  .timer-time {
+    font-size: 2rem;
+  }
+
+  .journey-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
